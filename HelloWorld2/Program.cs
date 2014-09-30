@@ -1,5 +1,4 @@
-﻿#region Program
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -82,41 +81,5 @@ namespace HelloWorld2
             double[,] C = new double[m, k];
             return C;
         }
-
-        /* SubtractMatrix
-        public static double[,] SubtractMatrix(double[,] A, double[,] B)
-        {
-            double[,] C = new double[MAX_SIZE, MAX_SIZE];
-
-            for (int i = 0; i < MAX_SIZE; i++)
-            {
-                for (int j = 0; j < MAX_SIZE; j++)
-                {
-                    C[i, j] = A[i, j] - B[i, j];
-                }
-            }
-
-            return C;
-        }
-        */
-
-        /* DivideMatrixByNumber
-        public static double[,] DivideMatrixByNumber(double[,] A, double k)
-        {
-            double[,] C = new double[MAX_SIZE, MAX_SIZE];
-
-            for (int i = 0; i < MAX_SIZE; i++)
-            {
-                for (int j = 0; j < MAX_SIZE; j++)
-                {
-                    C[i, j] = A[i, j] / k;
-                }
-            }
-
-            return C;
-        }
-        */
-
     }
 }
-#endregion Program
