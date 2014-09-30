@@ -12,30 +12,12 @@ namespace HelloWorld2
         
         static void Main(string[] args)
         {
-            int m, n1, n2, k;
-
-            Console.Write("Podaj ilosc wierszy pierwszej macierzy: ");
-            m = int.Parse(Console.ReadLine());
-
-            Console.Write("Podaj ilosc kolumn pierwszej macierzy: ");
-            n1 = int.Parse(Console.ReadLine());
-
-            Console.Write("Podaj ilosc wierszy drugiej macierzy: ");
-            n2 = int.Parse(Console.ReadLine());
-
-            Console.Write("Podaj ilosc kolumn drugiej macierzy: ");
-            k = int.Parse(Console.ReadLine());
-
-            if (n1 != n2)
-            {
-                Console.WriteLine("ErRoR! Macierzy nie można pomnożyć!");
-            }
+            // Miejsce na kod
         }
     }
 
     class Matrix
     {
-        private const int MAX_SIZE = 5;
 
         public static double[,] CreateMatrix(int m, int n)
         {
@@ -68,11 +50,11 @@ namespace HelloWorld2
             return C;
         }
 
-        public static void PrintMatrix(double[,] M)
+        public static void PrintMatrix(double[,] M, int m, int n)
         {
-            for (int i = 0; i < MAX_SIZE; i++)
+            for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j < MAX_SIZE; j++)
+                for (int j = 0; j < n; j++)
                 {
                     Console.Write(M[i, j] + " ");
                 }
