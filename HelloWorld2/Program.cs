@@ -13,7 +13,23 @@ namespace HelloWorld2
         {
             Matrix m = new Matrix();
 
-            // ...a dalej Pinokio idzie sam :D
+            int a=3, b=4;
+
+            Console.WriteLine("Macierz A -->");
+            double[,] A = m.CreateMatrix(a,b);
+            Console.WriteLine(Environment.NewLine + "Macierz B -->");
+            double[,] B = m.CreateMatrix(a, b);
+
+            Console.WriteLine(Environment.NewLine + "Macierz A -->");
+            m.PrintMatrix(A, a, b);
+
+            Console.WriteLine(Environment.NewLine + "Macierz B -->");
+            m.PrintMatrix(B, a, b);
+
+            Console.WriteLine(Environment.NewLine + "Dodawanie macierzy");
+            m.PrintMatrix(m.AddMatrix(A, B, a, b), a, b);
+
+            Console.Read();
         }
     }
 
