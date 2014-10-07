@@ -11,14 +11,16 @@ namespace HelloWorld2
         
         static void Main(string[] args)
         {
-            // Miejsce na kod
+            Matrix m = new Matrix();
+
+            // ...a dalej Pinokio idzie sam :D
         }
     }
 
     class Matrix
     {
 
-        public static double[,] CreateMatrix(int m, int n)
+        public double[,] CreateMatrix(int m, int n)
         {
             double[,] C = new double[m, n];
 
@@ -34,7 +36,7 @@ namespace HelloWorld2
                 return C;
         }
 
-        public static double[,] AddMatrix(double[,] A, double[,] B, int m, int n)
+        public double[,] AddMatrix(double[,] A, double[,] B, int m, int n)
         {
             double[,] C = new double[m, n];
 
@@ -49,7 +51,7 @@ namespace HelloWorld2
             return C;
         }
 
-        public static void PrintMatrix(double[,] M, int m, int n)
+        public void PrintMatrix(double[,] M, int m, int n)
         {
             for (int i = 0; i < m; i++)
             {
@@ -61,7 +63,7 @@ namespace HelloWorld2
             }
         }
 
-        public static double[,] MultipyMatrixByNumber(double[,] A, double k, int m, int n)
+        public double[,] MultipyMatrixByNumber(double[,] A, double k, int m, int n)
         {
             double[,] C = new double[m, n];
 
@@ -76,9 +78,18 @@ namespace HelloWorld2
             return C;
         }
 
-        public static double[,] MultiplyMatrix(double[,] A, double[,] B, int m, int n, int k)
+        public double[,] MultiplyMatrix(double[,] A, double[,] B, int m, int n, int k)
         {
             double[,] C = new double[m, k];
+            for (int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < k; j++)
+                {
+                    C[i, j] = 0;
+                    for (int r = 0; r < n; r++)
+                        C[i, j] += A[i, r] * B[r, j];
+                }
+            }
             return C;
         }
     }
